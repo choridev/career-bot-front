@@ -20,7 +20,6 @@ function Test() {
     method: "POST",
     url: `api/students/${studentId}/questions/${currentIndex + 1}/answers/`,
     requestData: {
-      student_id: studentId,
       answer1: userResponses[0],
       ...(questions[currentIndex].content.match(/_/g)?.length > 1 && {
         answer2: userResponses[1],
